@@ -1,6 +1,17 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
 body {
       letter-spacing: 0.2rem;
       font-size: 0.8rem;
+      position: relative;
+}
+
+.information {
+      padding-top: 50px;
 }
 
 .card {
@@ -12,4 +23,17 @@ body {
       top: -50px;
       background-color: #fff;
       border-radius: 50%;
+      width: 100px;
+      height: 100px;
+}
+
+.overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }

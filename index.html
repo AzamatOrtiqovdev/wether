@@ -11,7 +11,7 @@
 <body>
 
       <div class="container text-muted mx-auto text-center">
-            <h1 class="my-4">the Information of Wether</h1>
+            <h1 class="information">The Weather Information</h1>
 
             <form id="location" class="text-muted">
                   <label for="city" class="mb-3">
@@ -20,7 +20,7 @@
                   <input type="text" name="city" class="form-control w-50 mb-3 mx-auto" autocomplete="off">
             </form>
 
-            <div id="card" class="card shadow-lg w-50 mx-auto">
+            <div id="card" class="card shadow-lg w-50 mx-auto d-none">
                   <div class="icon-container">
                         <img id="wether-icon" class="icon" src="" alt="">
                   </div>
@@ -32,6 +32,12 @@
                               <span>&deg;C</span>
                         </div>
                   </div>
+            </div>
+      </div>
+
+      <div id="overlay" class="overlay d-none">
+            <div class="spinner-border text-success" role="status">
+                  <span class="sr-only"></span>
             </div>
       </div>
       
