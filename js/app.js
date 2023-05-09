@@ -38,6 +38,12 @@ const updateUI = (wether) => {
 // get wether 
 const getWether = async (city) => {
       const data = await getData(city) // This function runs in app.js, because We have attached js files to html file. For the getData function to work, first We must attach script.js file to index.html file, after We must attach app.js file to index.html file.
+
+      if(data.cod != 200) {
+            cardElement.classList.add('d-none')
+            throw new Error("Bunday Shahar yo'q Iltimos qayta ma'lumot kiriting")
+      }
+
       return data
 }
 
@@ -49,4 +55,5 @@ locationElements.addEventListener("submit", (event) => {
       locationElements.reset()
       getWether(cityName)
             .then((data) => updateUI(data))
+            .catch((error) => alert(error.message))
 })
